@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = "KratosCategoryExtension"
-s.version          = "0.0.1"
+s.version          = "0.0.2"
 s.summary          = "https://github.com/Kratos28/KratosCategoryExtension.git"
 s.description  =  "https://github.com/Kratos28/KratosCategoryExtension.git  This is KratosCategoryExtension"
 s.homepage         = "https://github.com/Kratos28/KratosCategoryExtension.git"
@@ -9,7 +9,7 @@ s.license          = 'MIT'
 
 
 s.author           = { "Kratos" => "461400226@qq.com" }
-s.source           = { :git => "https://github.com/Kratos28/KratosCategoryExtension.git", :tag => '0.0.1' }
+s.source           = { :git => "https://github.com/Kratos28/KratosCategoryExtension.git", :tag => '0.0.2' }
 
 s.platform     = :ios, '7.0'
 s.requires_arc = true
