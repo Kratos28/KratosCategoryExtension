@@ -1,9 +1,8 @@
 //
 //  UIButton+Extension.m
-//  美团HD
 //
-//  Created by MJ Lee on 14/8/14.
-//  Copyright (c) 2014年 itcast. All rights reserved.
+//  Created by Kratos on 16/3/8.
+//  Copyright © 2016年 Kratos. All rights reserved.
 //
 
 #import "UIButton+Extension.h"
