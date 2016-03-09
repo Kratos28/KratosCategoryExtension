@@ -13,6 +13,7 @@
 #import "UIButton+CenterImageAndTitle.h"
 #import "UIView+AutoLayout.h"
 #import "UIButton+Extension.h"
+#import "UIColor+Extension.h"
 
 
 #ifdef DEBUG // 调试状态, 打开LOG功能
