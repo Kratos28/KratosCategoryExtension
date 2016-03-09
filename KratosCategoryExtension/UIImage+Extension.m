@@ -34,6 +34,13 @@
     return [image stretchableImageWithLeftCapWidth:image.size.width * 0.5 topCapHeight:image.size.height * 0.5];
 }
 
+
++ (UIImage *)resizedImage:(NSString *)name width:(CGFloat)width height:(CGFloat)height;
+
+{
+    UIImage *image = [UIImage imageNamed:name];
+    return [image stretchableImageWithLeftCapWidth:image.size.width * width topCapHeight:image.size.height * height];
+}
 + (instancetype)captureWithView:(UIView *)view {
     
     //1开启上下文

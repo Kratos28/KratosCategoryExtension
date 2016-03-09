@@ -18,6 +18,8 @@
  *  根据图片名返回一张能够自由拉伸的图片
  */
 + (UIImage *)resizedImage:(NSString *)name;
++ (UIImage *)resizedImage:(NSString *)name width:(CGFloat)width height:(CGFloat)height;
+
 
 /**
  *  打水印
