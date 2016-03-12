@@ -10,4 +10,14 @@
 @interface UIBarButtonItem (Extension)
 //快速自定UIBarButtonItem
 + (UIBarButtonItem *)itemWithImageName:(NSString *)imageName highImageName:(NSString *)highImageName target:(id)target action:(SEL)action;
+
+
+/**
+ *  //快速自定UIBarButtonItem
+
+ *
+ *  @param backgroundImageName     背景图片
+ *  @param highImageName 高亮背景图片
+ */
++ (UIBarButtonItem *)itemWithBackgroundImageName:(NSString *)backgroundImageName backgroundhighImageName:(NSString *)backgroundHighImageName target:(id)target action:(SEL)action;
 @end
