@@ -48,9 +48,9 @@
 
 + (UIBarButtonItem *)itemWithBackgroundImageName:(NSString *)backgroundImageName backgroundDisabledImageName:(NSString *)backgroundHighImageName target:(id)target action:(SEL)action
 {
-    IButton *button = [[UIButton alloc] init];
-    [button setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
-    [button setBackgroundImage:[UIImage imageNamed:@"i_sochang_on"] forState:UIControlStateDisabled];
+    UIButton *button = [[UIButton alloc] init];
+    [button setBackgroundImage:[UIImage imageNamed:backgroundImageName] forState:UIControlStateNormal];
+    [button setBackgroundImage:[UIImage imageNamed:backgroundHighImageName] forState:UIControlStateDisabled];
     // 设置按钮的尺寸为背景图片的尺寸
     CGRect buttonRect = button.frame;
     buttonRect.size = button.currentBackgroundImage.size;
