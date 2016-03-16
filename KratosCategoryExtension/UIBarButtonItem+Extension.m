@@ -45,4 +45,20 @@
     return [[UIBarButtonItem alloc] initWithCustomView:button];
 
 }
+
++ (UIBarButtonItem *)itemWithBackgroundImageName:(NSString *)backgroundImageName backgroundDisabledImageName:(NSString *)backgroundHighImageName target:(id)target action:(SEL)action
+{
+    IButton *button = [[UIButton alloc] init];
+    [button setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    [button setBackgroundImage:[UIImage imageNamed:@"i_sochang_on"] forState:UIControlStateDisabled];
+    // 设置按钮的尺寸为背景图片的尺寸
+    CGRect buttonRect = button.frame;
+    buttonRect.size = button.currentBackgroundImage.size;
+    button.frame = buttonRect;
+    
+    // 监听按钮点击
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    return [[UIBarButtonItem alloc] initWithCustomView:button];
+
+}
 @end
