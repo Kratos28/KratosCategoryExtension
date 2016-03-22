@@ -12,7 +12,6 @@ s.requires_arc = true
 s.source_files  = 'KratosCategoryExtension/*.{h,m}'
 s.frameworks = "Foundation","UIKit","MapKit","QuartzCore","CoreText","ImageIO","Security","CoreTelephony","CoreGraphics"
 s.resource     = 'KratosCategoryExtension/Resource/KratosCategoryExtension.bundle'
-
 #s.vendored_libraries = 'KratosExtension/*.a'
 #s.library = 'KratosExtension'
 #s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/KratosExtension/KratosExtension/libKratosExtension.a"' }
