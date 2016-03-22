@@ -6,7 +6,7 @@ s.description  =  "https://github.com/Kratos28/KratosCategoryExtension.git  This
 s.homepage         = "https://github.com/Kratos28/KratosCategoryExtension.git"
 s.license          = 'MIT'
 s.author           = { "Kratos" => "461400226@qq.com" }
-s.source           = { :git => "https://github.com/Kratos28/KratosCategoryExtension.git", :tag => '0.0.3' }
+s.source           = { :git => "https://github.com/Kratos28/KratosCategoryExtension.git", :tag =>  s.version }
 s.platform     = :ios, '7.0'
 s.requires_arc = true
 s.source_files  = 'KratosCategoryExtension/*.{h,m}'
