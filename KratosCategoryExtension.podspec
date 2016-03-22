@@ -9,7 +9,7 @@ s.author           = { "Kratos" => "461400226@qq.com" }
 s.source           = { :git => "https://github.com/Kratos28/KratosCategoryExtension.git", :tag =>  s.version }
 s.platform     = :ios, '7.0'
 s.requires_arc = true
-s.source_files  = 'KratosCategoryExtension/*.{h,m}'
+s.source_files  = 'KratosCategoryExtension/**/*.{h,m}'
 s.frameworks = "Foundation","UIKit","MapKit","QuartzCore","CoreText","ImageIO","Security","CoreTelephony","CoreGraphics"
 s.resource     = 'KratosCategoryExtension/Resource/KratosCategoryExtension.bundle'
 #s.vendored_libraries = 'KratosExtension/*.a'
