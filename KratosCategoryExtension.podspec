@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = "KratosCategoryExtension"
-s.version          = "0.0.3"
+s.version          = "0.0.4"
 s.summary          = "https://github.com/Kratos28/KratosCategoryExtension.git"
 s.description  =  "https://github.com/Kratos28/KratosCategoryExtension.git  This is KratosCategoryExtension"
 s.homepage         = "https://github.com/Kratos28/KratosCategoryExtension.git"
@@ -10,7 +10,7 @@ s.source           = { :git => "https://github.com/Kratos28/KratosCategoryExtens
 s.platform     = :ios, '7.0'
 s.requires_arc = true
 s.source_files  = 'KratosCategoryExtension/**/*.{h,m}'
-s.resources      = 'Resource/**/*.png'
+s.resource      = 'Resource/KratosCategoryExtension.bundle'
 
 
 
