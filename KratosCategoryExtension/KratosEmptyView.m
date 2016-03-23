@@ -21,7 +21,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.contentMode = UIViewContentModeCenter;
-        self.image = [UIImage imageNamed:@"icon_map_search_empty"];
+        self.image = [UIImage imageNamed:[@"KratosCategoryExtension.bundle" stringByAppendingPathComponent:@"icon_map_search_empty"]];
     }
     return self;
 }
