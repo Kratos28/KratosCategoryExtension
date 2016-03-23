@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = "KratosCategoryExtension"
-s.version          = "0.0.4"
+s.version          = "0.0.5"
 s.summary          = "https://github.com/Kratos28/KratosCategoryExtension.git"
 s.description  =  "https://github.com/Kratos28/KratosCategoryExtension.git  This is KratosCategoryExtension"
 s.homepage         = "https://github.com/Kratos28/KratosCategoryExtension.git"
