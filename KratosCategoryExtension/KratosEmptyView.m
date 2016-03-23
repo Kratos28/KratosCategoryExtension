@@ -12,7 +12,7 @@
 @implementation KratosEmptyView
 
 
-+ (instancetype)KratosEmptyView
++ (instancetype)EmptyView
 {
     return [[self alloc] init];
 }
@@ -21,7 +21,10 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.contentMode = UIViewContentModeCenter;
-        self.image = [UIImage imageNamed:[@"KratosCategoryExtension.bundle" stringByAppendingPathComponent:@"icon_map_search_empty"]];
+        self.image = [UIImage imageNamed:KratosExtensionSrcName(@"icon_map_search_empty.png")] ?: [UIImage imageNamed:        KratosExtensionFrameworkSrcName(@"icon_map_search_empty.png")];
+
+    
+        NSLog(@"self.image%@",self.image);
     }
     return self;
 }

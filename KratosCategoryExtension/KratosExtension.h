@@ -27,6 +27,7 @@
 
 // 随机色
 #define KRandomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0]
+#define KratosExtensionSrcName(file) [@"KratosCategoryExtension.bundle" stringByAppendingPathComponent:file]
 
 //灰色
 #define KGlobalBg    KColor(211, 211, 211)
