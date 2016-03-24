@@ -277,7 +277,6 @@
             
             // 不同
             if (![tempString isEqualToString:firstString]) {
-                SMMLog(@"不同");
                 //分组
                 itme = [NSMutableArray array];
                 [itme addObject:dict];
