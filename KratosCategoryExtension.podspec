@@ -14,6 +14,19 @@ s.resource      = 'KratosCategoryExtension/KratosCategoryExtension.bundle'
 
 
 
+s.subspec 'WebProgressView' do |ss|
+ss.source_files = 'WebProgressView/*.{h,m}'
+end
+
+s.subspec 'YJSortAndIndex' do |ss|
+ss.source_files = 'YJSortAndIndex/*.{h,m}'
+end
+
+
+
+
+
+
 #s.vendored_libraries = 'KratosExtension/*.a'
 #s.library = 'KratosExtension'
 #s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/KratosExtension/KratosExtension/libKratosExtension.a"' }
