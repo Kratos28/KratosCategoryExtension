@@ -32,7 +32,9 @@
 
 - (void)didMoveToSuperview
 {
-    [self autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+    if (self.superview) {
+        [self autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+    }
 }
 
 @end
