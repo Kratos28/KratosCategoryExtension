@@ -9,22 +9,23 @@
 #import "KratosEmptyView.h"
 #import "UIView+AutoLayout.h"
 
+
 @implementation KratosEmptyView
 
 
-+ (instancetype)EmptyView
++ (instancetype)KratosEmptyViewWithIconName:(NSString *)iconname;
 {
-    return [[self alloc] init];
-}
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        self.contentMode = UIViewContentModeCenter;
-        self.image = [UIImage imageNamed:KratosExtensionSrcName(@"icon_map_search_empty.png")] ?: [UIImage imageNamed:        KratosExtensionFrameworkSrcName(@"icon_map_search_empty.png")];
-
+    KratosEmptyView *emptyView = [[KratosEmptyView alloc] initWithIconName:iconname];
     
-        NSLog(@"self.image%@",self.image);
+    return emptyView;
+}
+
+
+- (instancetype)initWithIconName:(NSString *)iconName;
+{
+    if (self = [super init]) {
+        self.contentMode = UIViewContentModeCenter;
+        self.image = iconName.length == 0 ?  [UIImage imageNamed:[@"KratosCategoryExtension.bundle" stringByAppendingPathComponent:@"icon_map_search_empty"]] :[UIImage imageNamed:iconName];
     }
     return self;
 }

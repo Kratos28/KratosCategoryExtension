@@ -6,12 +6,8 @@
 //  Copyright © 2016年 Kratos. All rights reserved.
 //
 
-
 #import <UIKit/UIKit.h>
 
-#define KratosExtensionSrcName(file) [@"KratosCategoryExtension.bundle" stringByAppendingPathComponent:file]
-#define KratosExtensionFrameworkSrcName(file) [@"Frameworks/KratosCategoryExtension.framework/KratosCategoryExtension.bundle" stringByAppendingPathComponent:file]
-
 @interface KratosEmptyView : UIImageView
-+ (instancetype)EmptyView;
++ (instancetype)KratosEmptyViewWithIconName:(NSString *)iconname;
 @end
