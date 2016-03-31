@@ -14,13 +14,13 @@ s.resource      = 'KratosCategoryExtension/KratosCategoryExtension.bundle'
 
 
 
-s.subspec 'WebProgressView' do |ss|
-ss.source_files = 'WebProgressView/*.{h,m}'
-end
+#s.subspec 'WebProgressView' do |ss|
+#ss.source_files = 'WebProgressView/*.{h,m}'
+#end
 
-s.subspec 'YJSortAndIndex' do |ss|
-ss.source_files = 'YJSortAndIndex/*.{h,m}'
-end
+#s.subspec 'YJSortAndIndex' do |ss|
+#ss.source_files = 'YJSortAndIndex/*.{h,m}'
+#end
 
 
 
