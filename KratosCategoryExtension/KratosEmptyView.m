@@ -25,7 +25,9 @@
 {
     if (self = [super init]) {
         self.contentMode = UIViewContentModeCenter;
-        self.image = iconName.length == 0 ?  [UIImage imageNamed:[@"KratosCategoryExtension.bundle" stringByAppendingPathComponent:@"icon_map_search_empty"]] :[UIImage imageNamed:iconName];
+        self.image = iconName.length == 0? [UIImage imageNamed:KratosExtensionSrcName(@"icon_map_search_empty.png")] ?:
+                                           [UIImage imageNamed: KratosExtensionFrameworkSrcName(@"icon_map_search_empty.png")] :
+                                           [UIImage imageNamed:iconName] ;
     }
     return self;
 }
