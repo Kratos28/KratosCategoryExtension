@@ -27,6 +27,14 @@
 #define KLog(...)
 #endif
 
+#ifdef DEBUG // 调试状态, 打开LOG功能
+#define KLogFunc KLog(@"%s",__func__);
+#else // 发布状态, 关闭LOG功能
+#define KLogFunc
+#endif
+
+
+
 // 随机色
 #define KRandomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0]
 
