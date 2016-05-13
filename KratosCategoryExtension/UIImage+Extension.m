@@ -11,7 +11,7 @@
 /**
  * 修发图片大小
  */
-+(UIImage *)imageWithImageSimple:(UIImage*)image scaledToSize:(CGSize) newSize;
++ (UIImage *)k_imageWithImageSimple:(UIImage*)image scaledToSize:(CGSize) newSize;
 {
     if([[UIScreen mainScreen] scale] <= 3.0){
         UIGraphicsBeginImageContextWithOptions(newSize, NO, 3.0);

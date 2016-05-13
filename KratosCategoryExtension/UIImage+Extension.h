@@ -10,10 +10,11 @@
 @interface UIImage (Extension)
 + (instancetype)captureWithView:(UIView *)view;
 
+
 /**
  * 修发图片大小
  */
-+ (UIImage *)imageWithImageSimple:(UIImage*)image scaledToSize:(CGSize) newSize;
++ (UIImage *)k_imageWithImageSimple:(UIImage*)image scaledToSize:(CGSize) newSize;
 /**
  *  根据图片名返回一张能够自由拉伸的图片
  */
