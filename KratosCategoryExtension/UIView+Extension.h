@@ -23,7 +23,7 @@
 @property (nonatomic, assign) CGSize size;
 /****************************************************************************/
 
-
+- (BOOL)isShowOnkeyWindow;
 
 
 @end
