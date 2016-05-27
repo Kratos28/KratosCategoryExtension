@@ -50,4 +50,7 @@
  */
 + (UIImage *)imageWithColor:(UIColor *)color;
 
+- (UIImage *)circleImage;
+
+
 @end
