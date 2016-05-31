@@ -24,6 +24,6 @@
 /****************************************************************************/
 
 - (BOOL)isShowOnkeyWindow;
-
++ (instancetype)viewFromXib;
 
 @end
