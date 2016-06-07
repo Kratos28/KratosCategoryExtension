@@ -184,4 +184,36 @@
 {
     return [[self imageNamed:name] circleImage];
 }
+
+/**
+ *  根据CIImage生成指定大小的UIimage(常见使用二维码模糊)
+ *
+ *  @param image CIImage
+ *  @param Size  图片宽度
+ *
+ 
+ */
++ (UIImage *)k_createNonInterpolatedUIImageFormCIImage:(CIImage *)image withsize:(CGFloat)Size
+{
+    CGRect extent = CGRectIntegral(image.extent);
+    CGFloat scale = MIN(Size/CGRectGetWidth(extent), Size/CGRectGetHeight(extent));
+    
+    //创建BitMap
+    size_t width  = CGRectGetWidth(extent) *scale;
+    size_t height = CGRectGetHeight(extent) *scale;
+    CGColorSpaceRef cs = CGColorSpaceCreateDeviceGray();
+    CGContextRef bitmapRef = CGBitmapContextCreate(nil, width, height, 8, 0, cs, (CGBitmapInfo) kCGImageAlphaNone);
+    CIContext *context = [CIContext contextWithOptions:nil];
+    CGImageRef bitmapImage = [context createCGImage:image fromRect:extent];
+    CGContextSetInterpolationQuality(bitmapRef, kCGInterpolationNone);
+    CGContextScaleCTM(bitmapRef, scale, scale);
+    CGContextDrawImage(bitmapRef, extent, bitmapImage);
+    
+    //保存bitmap到图片
+    CGImageRef sacleImage = CGBitmapContextCreateImage(bitmapRef);
+    CGContextRelease(bitmapRef);
+    CGImageRelease(bitmapImage);
+    return [UIImage imageWithCGImage:sacleImage];
+}
+
 @end

@@ -57,4 +57,17 @@
  */
 + (instancetype)k_circleImageNamed:(NSString *)name;
 
+
+
+/**
+ *  根据CIImage生成指定大小的UIimage(常见使用二维码模糊)
+ *
+ *  @param image CIImage
+ *  @param Size  图片宽度
+ *
+ 
+ */
++ (UIImage *)k_createNonInterpolatedUIImageFormCIImage:(CIImage *)image withsize:(CGFloat)Size;
+
+
 @end
