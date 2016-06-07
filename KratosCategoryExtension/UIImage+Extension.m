@@ -179,4 +179,9 @@
     UIGraphicsEndImageContext();
     return image;
 }
+
++ (instancetype)k_circleImageNamed:(NSString *)name
+{
+    return [[self imageNamed:name] circleImage];
+}
 @end

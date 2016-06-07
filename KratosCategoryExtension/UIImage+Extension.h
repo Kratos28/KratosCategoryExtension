@@ -52,5 +52,9 @@
 
 - (UIImage *)circleImage;
 
+/**
+ * 返回一张圆形图片
+ */
++ (instancetype)k_circleImageNamed:(NSString *)name;
 
 @end
