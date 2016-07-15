@@ -262,7 +262,7 @@
     
     dic[@"contentMode"] = [NSNumber numberWithFloat:contentMode];
     
-    [self performSelector:@selector(setRadius:) withObject:dic afterDelay:0 inModes:@[NSRunLoopCommonModes]];
+    [self performSelector:@selector(k_setRadius:) withObject:dic afterDelay:0 inModes:@[NSRunLoopCommonModes]];
 }
 
 - (void)k_setRadius:(NSMutableDictionary *)dic {

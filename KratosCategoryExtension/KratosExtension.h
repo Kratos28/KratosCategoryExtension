@@ -17,7 +17,7 @@
 #import "UIView+Toast.h"
 #import "KratosEmptyView.h"
 #import "KSingleton.h"
-#import "UIViewController+POMExtension.h"
+#import "UIImage+RoundedCorner.h"
 
 
 

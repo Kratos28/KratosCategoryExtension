@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface UIViewController (POMExtension)
-+ (instancetype)k_findBestViewController:(UIViewController *)vc;
++ (instancetype) findBestViewController:(UIViewController *)vc;
 
 /** 获取当前控制器 */
-+ (instancetype)k_currentViewController;
++ (instancetype) currentViewController;
 @end

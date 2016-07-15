@@ -9,29 +9,29 @@
 #import "UIViewController+POMExtension.h"
 
 @implementation UIViewController (POMExtension)
-+ (instancetype)k_findBestViewController:(UIViewController *)vc {
++ (instancetype)findBestViewController:(UIViewController *)vc {
     if (vc.presentedViewController) {
         // Return presented view controller
-        return [UIViewController k_findBestViewController:vc.presentedViewController];
+        return [UIViewController findBestViewController:vc.presentedViewController];
     } else if ([vc isKindOfClass:[UISplitViewController class]]) {
         // Return right hand side
         UISplitViewController *svc = (UISplitViewController*) vc;
         if (svc.viewControllers.count > 0)
-            return [UIViewController k_findBestViewController:svc.viewControllers.lastObject];
+            return [UIViewController findBestViewController:svc.viewControllers.lastObject];
         else
             return vc;
     } else if ([vc isKindOfClass:[UINavigationController class]]) {
         // Return top view
         UINavigationController *svc = (UINavigationController *)vc;
         if (svc.viewControllers.count > 0)
-            return [UIViewController k_findBestViewController:svc.topViewController];
+            return [UIViewController findBestViewController:svc.topViewController];
         else
             return vc;
     } else if ([vc isKindOfClass:[UITabBarController class]]) {
         // Return visible view
         UITabBarController *svc = (UITabBarController *)vc;
         if (svc.viewControllers.count > 0)
-            return [UIViewController k_findBestViewController:svc.selectedViewController];
+            return [UIViewController findBestViewController:svc.selectedViewController];
         else
             return vc;
     } else {
@@ -39,10 +39,10 @@
         return vc;
     }
 }
-+ (instancetype)k_currentViewController {
++ (instancetype)currentViewController {
     // Find best view controller
     UIViewController *viewController = [UIApplication sharedApplication].keyWindow.rootViewController;
-    return [UIViewController k_findBestViewController:viewController];
+    return [UIViewController findBestViewController:viewController];
 }
 
 @end
