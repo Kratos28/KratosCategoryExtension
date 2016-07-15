@@ -35,6 +35,17 @@
 }
 
 
+- (UIImage *)imageWithScale:(CGFloat)scale
+{
+    CGFloat height =  width * size.width / size.height;
+    CGSize  currentSize = CGSize (width: width, height: height);
+    UIGraphicsBeginImageContext(currentSize);
+    [self drawInRect:CGRectMake(0,0,currentSize)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext;
+    return newImage;
+}
+
 + (UIImage *)resizedImage:(NSString *)name width:(CGFloat)width height:(CGFloat)height;
 
 {

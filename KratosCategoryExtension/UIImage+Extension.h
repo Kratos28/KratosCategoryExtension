@@ -49,8 +49,12 @@
  *
  */
 + (UIImage *)imageWithColor:(UIColor *)color;
-
+//返回一个圆形图片
 - (UIImage *)circleImage;
+
+//根据指定传入的宽度生成一张图片
+//按照图片的宽高比来压缩以前的图片
+- (UIImage *)imageWithScale:(CGFloat )scale;
 
 /**
  * 返回一张圆形图片
