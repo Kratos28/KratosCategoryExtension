@@ -29,7 +29,7 @@ s.xcconfig     = {'OTHER_LDFLAGS' => '-ObjC'}
 
 s.vendored_libraries = 'Lib/*.a'
 #s.library = 'KratosExtension'
-s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/Lib/*.a"' }
+s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/*.a"' }
 #s.frameworks = "Foundation","UIKit","MapKit","QuartzCore","CoreText","ImageIO","Security","CoreTelephony","CoreGraphics"
 
 
