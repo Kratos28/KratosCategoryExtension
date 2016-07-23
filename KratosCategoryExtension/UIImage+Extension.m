@@ -35,14 +35,14 @@
 }
 
 
-- (UIImage *)imageWithScale:(CGFloat)scale
+- (UIImage *)imageWithScale:(CGFloat)width
 {
-    CGFloat height =  width * size.width / size.height;
-    CGSize  currentSize = CGSize (width: width, height: height);
+    CGFloat height =  width * self.size.width / self.size.height;
+    CGSize  currentSize = CGSizeMake(width, height);
     UIGraphicsBeginImageContext(currentSize);
-    [self drawInRect:CGRectMake(0,0,currentSize)];
+    [self drawInRect:CGRectMake(0, 0, currentSize.width, currentSize.height)];
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext;
+    UIGraphicsEndImageContext();
     return newImage;
 }
 
