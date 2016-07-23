@@ -11,7 +11,8 @@ s.platform     = :ios, '7.0'
 s.requires_arc = true
 s.source_files  = 'KratosCategoryExtension/**/*.{h,m}'
 s.resource      = 'KratosCategoryExtension/KratosCategoryExtension.bundle'
-s.xcconfig     = {'OTHER_LDFLAGS' => '-ObjC'}
+
+
 
 #s.subspec 'WebProgressView' do |ss|
 #ss.source_files = 'WebProgressView/*.{h,m}'
