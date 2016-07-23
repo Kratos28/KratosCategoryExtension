@@ -13,7 +13,7 @@ s.source_files  = 'Lib/**/*.h'
 s.resource      = 'Lib/KratosCategoryExtension.bundle'
 s.xcconfig     = {'OTHER_LDFLAGS' => '-ObjC'}
 s.vendored_libraries = 'Lib/**/*.a'
-
+s.public_header_files = 'Lib/**/*.h'
 
 
 
