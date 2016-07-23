@@ -14,8 +14,7 @@ s.resource      = 'KratosCategoryExtension0.0.8/KratosCategoryExtension.bundle'
 s.xcconfig     = {'OTHER_LDFLAGS' => '-ObjC'}
 s.vendored_libraries = 'KratosCategoryExtension0.0.8/**/*.a'
 s.public_header_files = 'KratosCategoryExtension0.0.8/**/*.h'
-
-
+s.library = 'KratosCategoryExtension'
 
 
 
@@ -34,7 +33,6 @@ s.public_header_files = 'KratosCategoryExtension0.0.8/**/*.h'
 #end
 
 
-#s.library = 'KratosExtension'
 #s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/*.a"' }
 #s.frameworks = "Foundation","UIKit","MapKit","QuartzCore","CoreText","ImageIO","Security","CoreTelephony","CoreGraphics"
 end
