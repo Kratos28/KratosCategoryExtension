@@ -18,4 +18,14 @@
  *  @return 返回值
  */
 - (id)performSelector:(SEL)selector withObjects:(NSArray *)objects;
+
+
+
+/**
+ *  动态产生属性名字并且打印出来
+ *
+ *  @param dict 模型字典
+ */
++ (void )createPropertyCodeWith:(NSDictionary *)dict;
+
 @end

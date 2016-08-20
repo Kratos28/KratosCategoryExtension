@@ -46,4 +46,56 @@
     return returnValue;
     
 }
++ (void )createPropertyCodeWith:(NSDictionary *)dict
+{
+    
+    //属性代码
+    
+    
+    NSMutableString *str = [NSMutableString string];
+    
+    
+    [dict enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull PrepertyName, id  _Nonnull value, BOOL * _Nonnull stop) {
+        
+        NSLog(@"%@, %@",PrepertyName, [value class]);
+        
+        
+        NSString *code;
+        if ([value isKindOfClass:NSClassFromString(@"__NSCFString")] ||
+            [value isKindOfClass:NSClassFromString(@"NSTaggedPointerString")])
+        {//字符串
+            code = [NSString stringWithFormat:@"@property (nonatomic, copy) NSString *%@;",PrepertyName];
+        }else if ([value isKindOfClass:NSClassFromString(@"__NSCFNumber")])
+        {
+            code = [NSString stringWithFormat:@"@property (nonatomic, strong) NSNumber *%@;",PrepertyName];
+            
+        }else if ([value isKindOfClass:NSClassFromString(@"__NSCFArray")])
+        {
+            code = [NSString stringWithFormat:@"@property (nonatomic, strong) NSArray *%@;",PrepertyName];
+            
+        }else if ([value isKindOfClass:NSClassFromString(@"__NSCFDictionary")])
+        {
+            code = [NSString stringWithFormat:@"@property (nonatomic, strong) NSDictionary *%@;",PrepertyName];
+            
+        }else if ([value isKindOfClass:NSClassFromString(@"__NSCFBoolean")])
+        {
+            code = [NSString stringWithFormat:@"@property (nonatomic, assign) BOOL %@;",PrepertyName];
+            
+        }else if ([value isKindOfClass:NSClassFromString(@"__NSDictionaryM")])
+        {
+            code = [NSString stringWithFormat:@"@property (nonatomic, strong) NSMutableDictionary *%@;",PrepertyName];
+            
+        }else if ([value isKindOfClass:NSClassFromString(@"__NSArrayM")])
+        {
+            code = [NSString stringWithFormat:@"@property (nonatomic, strong) NSMutableArray *%@;",PrepertyName];
+            
+        }
+        [str appendFormat:@"\n%@\n",code];
+        
+    }];
+    
+    NSLog(@"%@",str);
+    
+}
+
 @end

@@ -8,6 +8,14 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImage (Extension)
+
+/**
+ *  传一个View截图
+ *
+ *  @param view 要截图的View
+ *
+ *  @return 返回的图片
+ */
 + (instancetype)captureWithView:(UIView *)view;
 
 

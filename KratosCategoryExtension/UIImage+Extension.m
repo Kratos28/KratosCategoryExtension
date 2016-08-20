@@ -52,6 +52,13 @@
     UIImage *image = [UIImage imageNamed:name];
     return [image stretchableImageWithLeftCapWidth:image.size.width * width topCapHeight:image.size.height * height];
 }
+/**
+ *  传一个View截图
+ *
+ *  @param view 要截图的View
+ *
+ *  @return 返回的图片
+ */
 + (instancetype)captureWithView:(UIView *)view {
     
     //1开启上下文
