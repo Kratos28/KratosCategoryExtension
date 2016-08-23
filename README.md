@@ -1,0 +1,4 @@
+封装了一些常用的分类
+
+Cocoapods安装:
+直接搜索KratosCategoryExtension进行安装
