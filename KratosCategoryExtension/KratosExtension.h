@@ -53,3 +53,12 @@
  */
 #define KScreenH [UIScreen mainScreen].bounds.size.height
 
+/**
+ *  弱引用
+ */
+#define  KWeakSelf(type) __weak typeof(type) weak##type=type;
+/**
+ *  强引用：传入的参数一定要被弱引用修饰过
+ *
+ */
+#define  KStrongSelf(type) __strong typeof(type) type = weak##type;
